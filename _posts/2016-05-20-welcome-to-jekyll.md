@@ -1,23 +1,86 @@
 ---
 layout: post
-featured-img: emile-perron-190221
+title: VIM 基础使用方法
+summary: Markdown is a way to style text on the web.
+featured-img:  emile-perron-190221
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+# VIM 基础使用方法
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+### VIM使用教程
 
-Jekyll also offers powerful support for code snippets:
+1. 终端输入 vimtutor 可以直接查看VIＭ基础使用教程
+2. 浏览器输入 vim [Linux vi/*vim*  菜鸟教程](https://www.runoob.com/linux/linux-vim.html)
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+### VIM的进入与退出
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+打开终端输入 vim 回车即可进入vim
 
-[jekyll-docs]: http://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+输入 :exit 退出vim模式 退回终端
+
+### 创建文件
+命令 |  结果 
+ ---- | ---- 
+ :new 文件名|新建文件
+ vim 文件名|有就打开,没有就创建
+
+
+### 模式选择
+
+1. #### 命令模式
+
+命令 |  结果 
+ ---- | ---- 
+  vim+文件名|如果又选择文件打开,没有则创建打开
+  i|进入输入模式,在当前光标所在位置之前输入
+  a|进入输入模式,在当前光标所在位置之后输入
+  o|进入输入模式,在当前光标所在位置之后一行输入
+  h|光标向左移动 同left
+  l|光标向右移动 同right
+  j|光标向下移动 down
+  k|光标向上移动 up
+  q|进入记录模式
+  w|移动至下一个单词开头
+  e|移动到下一个单词末尾
+  r|替换字符r + 要替换的字符
+  y|复制 yy 复制当前行  nyy 复制光标所在之下几行 n数字
+  y1G|复制游标所在行到第一行的所有数据
+  yG|复制游标所在行到最后一行的所有数据
+  u|返回上一个动作
+  p|将复制的数据粘贴到光标下一行,P将复制的数据粘贴到光标上一行
+  s|删除光标所在位置的数据并进入输入模式
+  d|删除  dd删除游标所在的行,ndd 删除光标所在位置之后n行内容
+  f|行内查找 f + 要查找的字符
+  g| ngg 移至n行第一个字符 
+  x|删除当前光标所在处的字符,X向后删除数据同Del,nx 删除光标之后n个字符
+  c|cn 修改光标之后n行数据删除并进入插入模式
+  v|进入可视模式
+  b|移动至上一个单词开头
+  :|切换到底线命令模式, 以在最低一行输入命令
+  ctrl+r|恢复最近撤销
+
+3. #### 输入模式
+命令 |  结果 
+ ---- | ---- 
+ enter|回车 换行
+ Del|向后删除一个字符
+ 方向键|移动光标所在位置
+ home|移动光标到行首
+ end|移动光标到行尾
+ esc|退出输入模式
+
+4. #### 底线命令模式
+命令 |  结果 
+ ---- | ---- 
+:|进入底线命令模式
+:w|保存文件
+:q|退出
+:wq|保存退出
+!|强制   :q!强制退出
+:set nonu|取消行号显示
+:set number|显示行号
+:/|查找字符   n继续查找下一个
+:num|跳转到num行
+:1,10 m 12| 剪切1到10行，并粘贴在12行处
+:1,10 co 12|复制1到10行,	并粘贴在12行处
+:1,10 de|删除1到10行
+

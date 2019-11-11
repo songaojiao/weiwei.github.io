@@ -1,7 +1,10 @@
 ---
+​---
 layout: post
-title: Getting Started with Sleek
-featured-img: sleek
+title: Markdown Cheatsheet
+summary: Markdown is a way to style text on the web.
+featured-img:  emile-perron-190221
+​---
 ---
 
 ## Getting started

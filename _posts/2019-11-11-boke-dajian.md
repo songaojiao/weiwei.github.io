@@ -1,3 +1,10 @@
+---
+layout: post
+title: 个人博客搭建 
+summary: Markdown is a way to style text on the web.
+featured-img:  emile-perron-190221
+---
+
 # 							个人博客搭建 
 
 参考资料	:	<https://jekyllrb.com/>
