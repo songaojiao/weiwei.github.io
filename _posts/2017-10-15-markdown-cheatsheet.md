@@ -8,7 +8,7 @@ featured-img:  emile-perron-190221
 # git 常用操作命令
 
 ### 开始一个工作区 (参见	: git help tutorial)
-命令|作用
+|命令|作用|
 |--|--|
 |clone|克隆一个仓库到一个新目录|
 |init|创建一个控Git	仓库或从新初始化一个已存在的仓库|
