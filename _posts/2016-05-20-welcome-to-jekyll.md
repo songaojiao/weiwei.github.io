@@ -18,6 +18,7 @@ featured-img:  emile-perron-190221
 输入 :exit 退出vim模式 退回终端
 
 ### 创建文件
+
 命令 |  结果 
  ---- | ---- 
  :new 文件名|新建文件
@@ -59,6 +60,7 @@ featured-img:  emile-perron-190221
   ctrl+r|恢复最近撤销
 
 3. #### 输入模式
+
 命令 |  结果 
  ---- | ---- 
  enter|回车 换行
@@ -69,6 +71,7 @@ featured-img:  emile-perron-190221
  esc|退出输入模式
 
 4. #### 底线命令模式
+
 命令 |  结果 
  ---- | ---- 
 :|进入底线命令模式
