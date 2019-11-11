@@ -5,6 +5,5 @@
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 #
 layout: default
-title:宋傲娇
+title: 宋傲娇
 ---
-
