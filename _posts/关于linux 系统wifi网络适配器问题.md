@@ -1,0 +1,53 @@
+# 关于linux 系统wifi网络适配器问题
+
+### ubuntu 18.04.3 无线网卡8821ce 和设置 l2tp+ipsec
+
+#### 环境  :  Tinkpad E470 
+
+####  软件 :  ubuntu 18.04.3
+
+---
+
+1. 解决rlt8821ce无线网卡不能使用的问题
+
+
+
+直接下载高人整理的（driver3 对ubuntu18.04有效）
+执行下面的命令
+
+git clone <https://github.com/realtekofflinedrivers/rtl8821ce-offlineinstaller> 
+
+cd rtl8821ce-offlineinstaller-master/driver3/Ubuntu
+
+bash install.sh
+
+之后无线网卡就能正常使用了		
+
+#### 使用之后就能正常连wifi了 
+
+2. 配置 l2tp+ipsec
+
+安装network-manager-l2tp-gnome
+
+apt-get install -y network-manager-l2tp-gnome
+
+设置
+
+<img src="https://s1.51cto.com/images/blog/201909/10/0dd24ea8c28b21a4c75103931d567a50.png?x-oss-process=image/watermark,size_16,text_QDUxQ1RP5Y2a5a6i,color_FFFFFF,t_100,g_se,x_10,y_10,shadow_90,type_ZmFuZ3poZW5naGVpdGk=" style="zoom:100%;" />
+
+![](https://s1.51cto.com/images/blog/201909/10/cc9268a258ddb38d7deae42768097607.png?x-oss-process=image/watermark,size_16,text_QDUxQ1RP5Y2a5a6i,color_FFFFFF,t_100,g_se,x_10,y_10,shadow_90,type_ZmFuZ3poZW5naGVpdGk=)
+
+主要添加加密部分的内容
+
+参考链接：
+<https://github.com/nm-l2tp/NetworkManager-l2tp>
+
+如果还是连接失败可以卸载以下的包
+sudo apt purge libappstream4
+
+
+
+## 原相关网站 <https://blog.51cto.com/3138583/2437252>
+
+储存至本地文件 主目录/aojiao/rtl8821ce-offlineinstaller-master    这个文件
+
