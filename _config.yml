@@ -1,42 +1,23 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
+# Default, Defaults
+markdown: redcarpet
+highlighter: pygments # or rouge or null
+exclude: ["node_modules", "gulpfile.js", "package.json"]
 
-# Site settings
-title:            jekyllDecent
-subtitle:         Example Blog
-description:      This is the jekyllTheme example blog. It only exists to demonstrate how the theme looks and feels.
-keywords:         demo theme example github jekyll features
-language:         "en" # default language of the blog. Language codes: http://www.w3schools.com/tags/ref_language_codes.asp
+# Jekyll Defaults
+title: Artist Theme
+email: your-email@domain.com
+description: A small and simple site I made to test out Jekyll. Watch out! I'm going to make a material design theme next!
+baseurl: "http://localhost:3000" # the subpath of your site, e.g. /blog
 
-baseurl:          "/jekyllDecent" # the subpath of your site, e.g. /blog
-url:              "" # the base hostname & protocol for your site. Have a look at robots.txt as well!
-permalink:        /blog/:categories/:title
-cover:            /assets/mountain-cover.jpg
-disqus_shortname: "jekylldecent"
+# Where can people find your site?
+url: "http://localhost:3000"
+# When developing, set this ^ equal to whatever localhost you're using
 
-# Build settings
-sass:
-    style: compressed
-markdown: kramdown
-kramdown:
-  syntax_highlighter_opts:
-    disable: true
-include: ['_pages']
-exclude: [vendor, "developer-tools"]
-plugins:
-  - jekyll-mentions
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-redirect-from
+# Socail Media links
+# Use these to link users to your organization's social media sites
+twitter:
+facebook:
+google:
 
-compress_html:
-  clippings: all
-  comments: ["<!-- ", " -->"]
-  ignore:
-    envs: [local]
-  blanklines: true
-  startings: [head, body]
+author: Nina Petropoulos
+authorBio: A English major by day, a musician by night, and a web developer because of the summer I was bored - my name's Nina and I hope you enjoy my Hello Portland theme, the second theme I've made with Jekyll.

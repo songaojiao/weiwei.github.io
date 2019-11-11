@@ -1,17 +1,30 @@
----
-layout: compress
----
 <!DOCTYPE html>
-<html lang="{% if page.language %}{{ page.language | downcase }}{% else %}{{ site.language | downcase }}{% endif %}">
-{% include head.html %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>{{ page.title }}</title>
+    <meta name="viewport" content="width=device-width">
+    <!-- <Custo></Custo>m CSS -->
+    <link rel="stylesheet" href="{{ site.url }}/assets/css/main.css">
+  </head>
+  <body>
 
-<body class="home-template">
-    <div class="site-wrapper">
-        {% include header.html %}
+    {% include nav.html %}
+
+
+
+    <main id="panel">
+      <button class='toggle-button'><span class='bar'></span><span class='bar'></span><span class='bar'></span></button>
+      <div class='content-wrap'>
         {{ content }}
-        {% include footer.html %}
-    </div>
-</body>
+      </div>
+    </main>
 
-{% include global.html %}
+
+      {% include footer.html %}
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="{{ site.url }}/assets/js/function.js"></script>
+  </body>
 </html>

@@ -1,37 +1,27 @@
 ---
 layout: default
+title: Home
 ---
-<main class="content" role="main">
-    <article class="post single-post" itemscope itemtype="http://schema.org/BlogPosting">
 
-        <header class="post-header short-diver">
-            <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
-            <section class="post-meta">
-                <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
-                on
-                {% for tag in page.tags limit:5 %}
-                <span>{{ tag }}</span>
-                {% endfor %}
-            </section>
-        </header>
+<div class='xs-12 topBar hidden'>
+  <p>{{ page.title }}</p>
+</div>
 
-        <section class="post-content short-diver" itemprop="articleBody">
-            {{content}}
-        </section>
+<div class="xs-12 imgBack textCenter vertCenter banner" style='background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1) ), url({{ site.url }}/assets/img/{{ page.thumbnail }})'>
+  <div>
+    <a class='caps post-title' href='{{ post.url }}'>{{ page.title }}</a>
+    <p class='meta'>{{ page.date | date_to_long_string }} / by {{ page.author }}</p>
+  </div>
+</div>
 
-        <footer class="post-footer">
-            {% include authorinfo.html param=page.author %}
-        </footer>
+<div class='divider xs-12 topBarTrigger'></div>
 
-        {% if page.comments %}
-    		<div class="comments">
-    			<a href="javascript:;" class="view-comments"><i class="fa fa-comments"></i>View Comments...</a>
-    			<div id="disqus_thread"></div>
-    		</div>
-    		{% endif %}
+<div class='post-wrap'>
+  <h1>{{ page.title }}</h1>
+  <p class='meta'>
+    {{ page.author }} // {{ page.date | date_to_long_string }}
+  </p>
 
-    </article>
-</main>
+  {{ content }}
 
-{% include photoswipe.html %}
-{% include post_scripts.html %}
+</div>
