@@ -3,7 +3,7 @@
 layout: post
 title: Markdown Cheatsheet
 summary: Markdown is a way to style text on the web.
-featured-img: psb (3)
+featured-img: emile-perron-www
 ---
 
 
