@@ -1,5 +1,4 @@
 ---
-
 layout: post
 title: Markdown Cheatsheet
 summary: Markdown is a way to style text on the web.
