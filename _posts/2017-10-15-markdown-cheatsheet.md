@@ -9,7 +9,7 @@ featured-img:  emile-perron-190221
 
 ### 开始一个工作区 (参见	: git help tutorial)
 |命令|作用|
-|--|--|
+|----|----|
 |clone|克隆一个仓库到一个新目录|
 |init|创建一个控Git	仓库或从新初始化一个已存在的仓库|
 
@@ -23,7 +23,7 @@ featured-img:  emile-perron-190221
 
 ### 查看历史和状态	(参见	: git help)
 |命令|作用|
-|--|--|
+|----|----|
 |bisect|通过二分查找定位引入	bug	的提交|
 
 Linux 常用命令大全   方便查看   <https://blog.csdn.net/luansj/article/details/97272672>
