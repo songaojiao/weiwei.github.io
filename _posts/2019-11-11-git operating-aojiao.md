@@ -1,6 +1,7 @@
 layout: post
 title: Markdown Cheatsheet
-summary: Markdown is a
+summary: Markdown is a way to style text on the web.
+featured-img: emile-perron-190221
 
 <p style="font-size:53px;text-align:center">Git	笔记</p>
 ## **Git 说明**
