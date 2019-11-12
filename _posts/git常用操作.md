@@ -470,7 +470,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 解决bug分支 :
 
-在分支中发现bug 先使用 `git stash` 将dev工作区的文件储藏  然后创建一个新的分支 将bug修复 添加 在返回主分支 合并修改过的分支  
+在分支中发现bug 先使用 `git stash` 将dev工作区的文件储藏  然后创建一个新的分支 将bug修复 添加 在返回主分支 合并修改过的分支  1
 
 然后在切换到工作区的分支继续工作 工作完添加  Git专门提供了一个`cherry-pick`命令，让我们能复制一个特定的提交到当前分支
 
