@@ -17,6 +17,10 @@
             border: 1px solid darkgrey;
             float: left;
         }
+        #dv{
+            width: 100%;
+            background-size: 100%;
+        }
         .photo{
             width: 200px;
             height: 200px;
@@ -26,15 +30,16 @@
         }
     </style>
 </head>
-<!-- <div id="box"></div> -->
+<div id="dv"></div>
 
 <body id="box">
 
     <script>
         var box = document.getElementById('box');
         var xw = document.documentElement.clientHeight - 10;
-        box.style.height = xw+'px';
-        box.onclick = function() {
+        dv.style.height = xw+'px';
+        // box.style.height = xw+'px';
+        dv.onclick = function() {
             var dian = document.createElement('div');
             dian.className = "photo";
           
@@ -47,7 +52,7 @@
             dian.style.border = "3px solid "+g;
             dian.style.backgroundImage = "url(./love/"+p+".jpg)";
 
-            box.appendChild(dian);
+            dv.appendChild(dian);
 
 
             var dianLeft = dian.offsetLeft;
@@ -82,14 +87,14 @@
             }, 1)
             var arr = document.getElementsByClassName("photo");
             if (arr.length > 18){
-                box.removeChild(arr[0]); 
+                dv.removeChild(arr[0]); 
             }
         }
         var i=0;
         setInterval(function(){
             i++;
-            box.style.background = "url(./love/"+i+".jpg) ";
-            box.style.backgroundSize = "100%";
+            dv.style.background = "url(./love/"+i+".jpg) ";
+            dv.style.backgroundSize = "100%";
             if(i>=25){
                 i=0;
             }
