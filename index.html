@@ -22,9 +22,8 @@
             float: left;
         }
         .photo{
-            width: 100px;
-            height: 100px;
-            float: left;
+            width: 300px;
+            height: 300px;
             position: absolute;
             border-radius: 50%;
             background-size: 100%;
@@ -46,11 +45,8 @@
             var a = parseInt(Math.random() * 10);
             var b = parseInt(Math.random() * 10);
             var c = parseInt(Math.random() * 10);
-            var d = parseInt(Math.random() * 10);
-            var e = parseInt(Math.random() * 10);
-            var f = parseInt(Math.random() * 10);
             var p = parseInt(Math.random() * 21);
-            var g = "#" + a + b + c + d + e + f;
+            var g = "rgb(" + a +','+ b +','+ c + ")";
 
             dian.style.border = "3px solid "+g;
             dian.style.backgroundImage = "url(./love/"+p+".jpg)";
@@ -65,7 +61,6 @@
             var maxleft = boxwidth - dian.offsetWidth;
             var maxtop = boxheight - dian.offsetHeight;
 
-            var tang = parseInt(Math.random() * 10 + 1);
             var ltar = parseInt(Math.random() * 10 + 1);
             var ttar = parseInt(Math.random() * 10 + 1);
             setInterval(function() {
@@ -78,7 +73,7 @@
                 }
                 if (dianTop > maxtop) {
                     ttar = -1;
-                } else if (dianTop == 0) {
+                } else if (dianTop == 100) {
                     ttar = 1;
                 }
                 dianLeft += ltar;
