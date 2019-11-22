@@ -11,8 +11,7 @@
         }
         
         #box {
-            width: 1200px;
-            height: 685px;
+            width: 100%;
             background-color: rgb(37, 211, 255);
             border: 6px solid darkgrey;
             float: left
@@ -28,7 +27,6 @@
             float: left;
             position: absolute;
             border-radius: 50%;
-            /* background-image: url("./love/1.jpg"); */
             background-size: 100%;
         }
     </style>
@@ -39,14 +37,12 @@
 
     <script>
         var box = document.getElementById('box');
+        var xw = document.documentElement.clientHeight;
+        box.style.height = xw+'px';
         box.onclick = function() {
             var dian = document.createElement('div');
             dian.className = "photo";
-            /* dian.style.width = "300px";
-            dian.style.height = "300px";
-            dian.style.float = "left";
-            dian.style.position = "absolute";
-            dian.style.borderRadius = "50%"; */
+          
             var a = parseInt(Math.random() * 10);
             var b = parseInt(Math.random() * 10);
             var c = parseInt(Math.random() * 10);
@@ -58,7 +54,6 @@
 
             dian.style.border = "3px solid "+g;
             dian.style.backgroundImage = "url(./love/"+p+".jpg)";
-            // dian.style.backgroundSize = "100%"; 
 
             box.appendChild(dian);
 
