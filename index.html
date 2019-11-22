@@ -11,10 +11,10 @@
         }
         
         #box {
-            width: 100%;
-            background-color: rgb(37, 211, 255);
-            border: 6px solid darkgrey;
-            float: left
+            width: 99.5%;
+            background : url("./love/25.jpg") no-repeat center;
+            border: 1px solid darkgrey;
+            float: left;
         }
         button {
             width: 200px;
@@ -36,7 +36,7 @@
 
     <script>
         var box = document.getElementById('box');
-        var xw = document.documentElement.clientHeight;
+        var xw = document.documentElement.clientHeight - 10;
         box.style.height = xw+'px';
         box.onclick = function() {
             var dian = document.createElement('div');
@@ -89,6 +89,14 @@
                 box.removeChild(arr[0]); 
             }
         }
+        var i=0;
+        setInterval(function(){
+            i++;
+            box.style.background = "url(./love/"+i+".jpg) no-repeat center";
+            if(i>=25){
+                i=0;
+            }
+        }, 2222);
     </script>
 </body>
 <html>
