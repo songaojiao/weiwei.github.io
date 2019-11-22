@@ -12,13 +12,9 @@
         
         #box {
             width: 99.5%;
-            background : url("./love/25.jpg") no-repeat center;
+            background : url("./love/25.jpg");
+            background-size: 100%;
             border: 1px solid darkgrey;
-            float: left;
-        }
-        button {
-            width: 200px;
-            height: 40px;
             float: left;
         }
         .photo{
@@ -30,9 +26,9 @@
         }
     </style>
 </head>
-<div id="box"></div>
+<!-- <div id="box"></div> -->
 
-<body>
+<body id="box">
 
     <script>
         var box = document.getElementById('box');
@@ -45,7 +41,7 @@
             var a = parseInt(Math.random() * 10);
             var b = parseInt(Math.random() * 10);
             var c = parseInt(Math.random() * 10);
-            var p = parseInt(Math.random() * 21);
+            var p = parseInt(Math.random() * 24);
             var g = "rgb(" + a +','+ b +','+ c + ")";
 
             dian.style.border = "3px solid "+g;
@@ -85,14 +81,15 @@
 
             }, 1)
             var arr = document.getElementsByClassName("photo");
-            if (arr.length > 20){
+            if (arr.length > 18){
                 box.removeChild(arr[0]); 
             }
         }
         var i=0;
         setInterval(function(){
             i++;
-            box.style.background = "url(./love/"+i+".jpg) no-repeat center";
+            box.style.background = "url(./love/"+i+".jpg) ";
+            box.style.backgroundSize = "100%";
             if(i>=25){
                 i=0;
             }
